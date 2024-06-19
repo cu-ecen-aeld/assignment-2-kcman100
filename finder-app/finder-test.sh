@@ -57,19 +57,21 @@ fi
 
 #ls $WRITEDIR
 
-echo "Here 12"
+#echo "Here 12"
 
 for i in $( seq 1 $NUMFILES)
 do
-	echo "Trying to execute command ./writer.sh "$WRITEDIR/${username}$i.txt" "$WRITESTR
-	./writer.sh "$WRITEDIR/${username}$i.txt" "$WRITESTR"
+	#echo "Trying to execute command ./writer.sh "$WRITEDIR/${username}$i.txt" "$WRITESTR
+	#./writer.sh "$WRITEDIR/${username}$i.txt" "$WRITESTR"
+	echo "Trying to execute command ./writer. "$WRITEDIR/${username}$i.txt" "$WRITESTR
+	./writer "$WRITEDIR/${username}$i.txt" "$WRITESTR"
 done
 
-echo "Here 15"
+#echo "Here 15"
 
 OUTPUTSTRING=$(./finder.sh "$WRITEDIR" "$WRITESTR")
 
-echo "Here 17"
+#echo "Here 17"
 
 # remove temporary directories
 rm -rf /tmp/aeld-data
